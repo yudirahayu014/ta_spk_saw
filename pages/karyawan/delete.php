@@ -22,7 +22,7 @@ if (!$karyawan) {
     // FK ON DELETE CASCADE akan otomatis hapus nilai_matriks terkait
     $del = $db->prepare('DELETE FROM karyawan WHERE id = ?');
     $del->execute([$id]);
-    setFlash('success', "Karyawan <strong>{$karyawan['nama']}</strong> dan semua nilainya berhasil dihapus.");
+    setFlash('success', "Karyawan {$karyawan['nama']} berhasil dihapus.");
 }
 
 redirect('pages/karyawan/index.php');

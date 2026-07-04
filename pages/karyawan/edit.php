@@ -41,14 +41,14 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $cek = $db->prepare('SELECT id FROM karyawan WHERE kode = ? AND id != ?');
         $cek->execute([$input['kode'], $id]);
         if ($cek->fetch()) {
-            $errors[] = "Kode <strong>{$input['kode']}</strong> sudah digunakan karyawan lain.";
+            $errors[] = "Kode {$input['kode']} sudah digunakan karyawan lain.";
         }
     }
 
     if (empty($errors)) {
         $stmt = $db->prepare('UPDATE karyawan SET kode=?, nama=?, departemen=?, jabatan=? WHERE id=?');
         $stmt->execute([$input['kode'], $input['nama'], $input['departemen'], $input['jabatan'], $id]);
-        setFlash('success', "Data karyawan <strong>{$input['nama']}</strong> berhasil diperbarui.");
+        setFlash('success', "Data karyawan {$input['nama']} berhasil diperbarui.");
         redirect('pages/karyawan/index.php');
     }
 }

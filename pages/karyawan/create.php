@@ -31,14 +31,14 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $cek = $db->prepare('SELECT id FROM karyawan WHERE kode = ?');
         $cek->execute([$input['kode']]);
         if ($cek->fetch()) {
-            $errors[] = "Kode karyawan <strong>{$input['kode']}</strong> sudah digunakan.";
+            $errors[] = "Kode karyawan {$input['kode']} sudah digunakan.";
         }
     }
 
     if (empty($errors)) {
         $stmt = $db->prepare('INSERT INTO karyawan (kode, nama, departemen, jabatan) VALUES (?,?,?,?)');
         $stmt->execute(array_values($input));
-        setFlash('success', "Karyawan <strong>{$input['nama']}</strong> berhasil ditambahkan.");
+        setFlash('success', "Karyawan {$input['nama']} berhasil ditambahkan.");
         redirect('pages/karyawan/index.php');
     }
 }

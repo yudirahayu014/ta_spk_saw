@@ -16,7 +16,7 @@ if (!$kriteria) {
     setFlash('error', 'Kriteria tidak ditemukan.');
 } else {
     $db->prepare('DELETE FROM kriteria WHERE id = ?')->execute([$id]);
-    setFlash('success', "Kriteria <strong>{$kriteria['nama']}</strong> berhasil dihapus.");
+    setFlash('success', "Kriteria {$kriteria['nama']} berhasil dihapus.");
 }
 
 redirect('pages/kriteria/index.php');

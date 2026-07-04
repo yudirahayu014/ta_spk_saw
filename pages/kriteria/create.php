@@ -32,13 +32,13 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     if (empty($errors)) {
         $cek = $db->prepare('SELECT id FROM kriteria WHERE kode = ?');
         $cek->execute([$input['kode']]);
-        if ($cek->fetch()) $errors[] = "Kode <strong>{$input['kode']}</strong> sudah digunakan.";
+        if ($cek->fetch()) $errors[] = "Kode {$input['kode']} sudah digunakan.";
     }
 
     if (empty($errors)) {
         $stmt = $db->prepare('INSERT INTO kriteria (kode, nama, bobot, atribut, keterangan) VALUES (?,?,?,?,?)');
         $stmt->execute([$input['kode'], $input['nama'], $input['bobot'], $input['atribut'], $input['keterangan']]);
-        setFlash('success', "Kriteria <strong>{$input['nama']}</strong> berhasil ditambahkan.");
+        setFlash('success', "Kriteria {$input['nama']} berhasil ditambahkan.");
         redirect('pages/kriteria/index.php');
     }
 }

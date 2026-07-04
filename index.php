@@ -76,23 +76,23 @@ require_once __DIR__ . '/includes/header.php';
       </div>
     </div>
     <div class="card-body">
-      <p style="font-size:.875rem; color:var(--clr-text-muted); margin-bottom:16px;">
+      <!-- <p style="font-size:.875rem; color:var(--clr-text-muted); margin-bottom:16px;">
         <strong>Simple Additive Weighting (SAW)</strong> adalah metode pengambilan keputusan multi-kriteria dengan
         mencari penjumlahan terbobot dari rating kinerja pada setiap alternatif di semua atribut.
-      </p>
+      </p> -->
       <div class="saw-steps">
-        <div class="saw-step active">
+        <!-- <div class="saw-step active">
           <div class="saw-step-num">Langkah 1</div>
           <div class="saw-step-label">Matriks Keputusan</div>
-        </div>
-        <div class="saw-step">
+        </div> -->
+        <!-- <div class="saw-step">
           <div class="saw-step-num">Langkah 2</div>
           <div class="saw-step-label">Normalisasi</div>
         </div>
         <div class="saw-step">
           <div class="saw-step-num">Langkah 3</div>
           <div class="saw-step-label">Perangkingan</div>
-        </div>
+        </div> -->
       </div>
       <table class="tbl" style="font-size:.8rem;">
         <thead><tr><th>Kriteria</th><th>Bobot</th><th>Atribut</th></tr></thead>

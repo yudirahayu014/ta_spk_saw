@@ -61,7 +61,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
             if (empty($errors)) {
                 $db->commit();
-                setFlash('success', "Nilai periode <strong>{$periode}</strong> berhasil disimpan.");
+                setFlash('success', "Nilai periode {$periode} berhasil disimpan.");
                 redirect("pages/penilaian/input.php?periode={$periode}");
             } else {
                 $db->rollBack();

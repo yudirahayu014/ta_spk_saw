@@ -74,12 +74,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         <input class="form-control" type="password" name="password" placeholder="••••••••" required>
       </div>
       <button type="submit" class="btn btn-primary" style="width:100%; justify-content:center; padding:11px;">
-        Masuk ke Sistem
+        Masuk
       </button>
     </form>
 
     <p style="text-align:center; margin-top:20px; font-size:.78rem; color:var(--clr-text-muted);">
-      Demo: <strong>admin@spk.com</strong> / <strong>password</strong>
+      <!-- Demo: <strong>admin@spk.com</strong> / <strong>password</strong> -->
     </p>
   </div>
 </div>
